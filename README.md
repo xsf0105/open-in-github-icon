@@ -2,7 +2,7 @@
   <img src="./res/icon.png" height="160"/>
 </p>
 
-<h1 align="center">VS Code Open in GitHub Button</h1>
+<h1 align="center">VS Code Open in GitHub icon</h1>
 
 <a href="https://marketplace.visualstudio.com/items?itemName=xsf0105.open-in-github-icon" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/xsf0105.open-in-github-icon.svg?color=eee&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
 
