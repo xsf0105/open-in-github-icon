@@ -9,13 +9,3 @@
 Add a button to go to the GitHub on the status bar.
 
 ![](https://user-images.githubusercontent.com/11247099/230333941-29312ebb-432d-46be-bc26-c2ff4e5d284c.png)
-
-Built on top of [Open in GitHub](https://github.com/fabiospampinato/vscode-open-in-github).
-
-## Sponsors
-
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/xsf0105/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/xsf0105/static/sponsors.png'/>
-  </a>
-</p>
