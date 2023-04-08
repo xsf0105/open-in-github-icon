@@ -1,0 +1,68 @@
+{
+	"publisher": "xsf0105",
+	"name": "open-in-github-icon",
+	"displayName": "Open in GitHub Button",
+	"version": "0.0.1",
+	"private": true,
+	"packageManager": "pnpm@8.1.1",
+	"description": "Add a button to go to the GitHub on the status bar",
+	"author": "xsf0105 <allan91coder@gmail.com>",
+	"license": "MIT",
+	"homepage": "https://github.com/xsf0105/vscode-open-in-github-icon#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xsf0105/vscode-open-in-github-icon"
+	},
+	"bugs": {
+		"url": "https://github.com/xsf0105/vscode-open-in-github-icon/issues"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./dist/index.js",
+	"icon": "res/icon.png",
+	"files": [
+		"dist"
+	],
+	"engines": {
+		"vscode": "^1.77.0"
+	},
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "openInGitHub.openProject",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"build": "tsup src/index.ts --external vscode",
+		"dev": "nr build --watch",
+		"lint": "eslint .",
+		"vscode:prepublish": "nr build",
+		"publish": "vsce publish --no-dependencies",
+		"pack": "vsce package --no-dependencies",
+		"test": "vitest",
+		"typecheck": "tsc --noEmit",
+		"release": "bumpp && nr publish"
+	},
+	"devDependencies": {
+		"@antfu/ni": "^0.21.2",
+		"@types/node": "^18.15.11",
+		"@types/vscode": "^1.77.0",
+		"bumpp": "^9.1.0",
+		"eslint": "^8.37.0",
+		"esno": "^0.16.3",
+		"pnpm": "^8.1.1",
+		"rimraf": "^4.4.1",
+		"simple-git": "^3.17.0",
+		"tsup": "^6.7.0",
+		"typescript": "^5.0.3",
+		"vite": "^4.2.1",
+		"vitest": "^0.29.8",
+		"vsce": "^2.15.0"
+	}
+}
