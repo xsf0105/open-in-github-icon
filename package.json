@@ -1,11 +1,11 @@
 {
 	"publisher": "xsf0105",
 	"name": "open-in-github-icon",
-	"displayName": "Open in GitHub Button",
+	"displayName": "Open in GitHub Icon",
 	"version": "0.0.1",
 	"private": true,
 	"packageManager": "pnpm@8.1.1",
-	"description": "Add a button to go to the GitHub on the status bar",
+	"description": "Add a icon button to go to the GitHub on the status bar",
 	"author": "xsf0105 <allan91coder@gmail.com>",
 	"license": "MIT",
 	"homepage": "https://github.com/xsf0105/vscode-open-in-github-icon#readme",
