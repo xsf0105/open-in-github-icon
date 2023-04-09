@@ -1,12 +1,12 @@
 import {
 	StatusBarAlignment,
-	window,
-	env,
-	commands,
 	Disposable,
+	window,
+	commands,
+	env,
 	Uri,
+	workspace,
 } from "vscode";
-import { simpleGit } from "simple-git";
 
 /**
  * 插件被激活时触发，所有代码总入口
@@ -15,22 +15,18 @@ import { simpleGit } from "simple-git";
 export function activate(context: { subscriptions: Disposable[] }) {
 	context.subscriptions.push(
 		commands.registerCommand("openInGitHubIcon.openProject", () => {
-			// simpleGit().remote({'-v'})
-			// console.log(simpleGit().getRemotes(), 32);
+			if (!workspace.workspaceFolders) {
+				window.showInformationMessage("Open a folder/workspace first");
+				return;
+			} else {
+				const name = workspace.workspaceFolders[0].name; // project name(same as package.json's name)
 
-			// simpleGit()
-			// 	.getRemotes()
-			// 	.then((res) => {
-			// 		console.log(res);
-			// 	});
-
-			window.showInformationMessage(
-				`您执行了 openInGitHubIcon.openProject 命令${simpleGit().getRemotes()}`
-			);
-			env.openExternal(Uri.parse("https://github.com"));
-
-			// TODO:
-			// window.showErrorMessage ( 'Remote repository not found' );
+				window.showInformationMessage(
+					`您执行了 openInGitHubIcon.openProject 命令! 当前项目名为：${name}`
+				);
+				// TODO：可直接跳转发布系统
+				// env.openExternal(Uri.parse("https://github.com"));
+			}
 		})
 	);
 
